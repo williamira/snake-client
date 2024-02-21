@@ -1,3 +1,4 @@
+const { Server } = require("http");
 const net = require("net");
 
 const connect = function () {
@@ -10,10 +11,15 @@ const connect = function () {
     console.log(data);
   })
 
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server");
+  })
+
+  conn.write("Name: WIC")
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
   return conn;
 };
 
-module.exports = {connect: connect};
+module.exports = {connect};
