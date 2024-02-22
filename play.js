@@ -1,25 +1,12 @@
-const {connect} = require('./client')
+const { connect } = require('./client') // to extract the connect function from client.js
 
-connect()
+const { setupInput } = require('./input') // to extract the setUpInput and handleUserInput functions from input.js
+
+connect() // calling the connect function
 
 
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
 
-  stdin.on("data", handleUserInput);
 
-  return stdin;
-};
-
-const handleUserInput = function (data) {
-  if (data === '\u0003') { // if users presses ctrl c the game will end
-    process.exit()
-  }
-};
-
-setupInput();
+setupInput(); // calling the input function
 
 console.log("Connecting ...");
