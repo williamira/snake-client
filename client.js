@@ -13,11 +13,13 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
+    
   })
 
   conn.write("Name: WIC")
   // interpret incoming data as text
   conn.setEncoding("utf8");
+
 
   return conn;
 };
