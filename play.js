@@ -5,7 +5,7 @@ const { setupInput } = require('./input') // to extract the setUpInput and handl
 console.log("Connecting ...");
 
 
-const conn = connect() // calling the connect function
+const conn = connect() // calling the connect function and storing its result in a variable to be used 
 
 
-setupInput(conn); // calling the input function
+setupInput(conn); // calling the input function with an argument of the conn variable
