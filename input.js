@@ -21,7 +21,7 @@ const handleUserInput = function(data) { // a function to handle user input such
     process.exit();
   }
   // to create a variable with a key-value pair of the movement_keys objects depending on which key is pressed during game(w, a, s, d)
-  const direction = MOVEMENT_KEYS[data]; 
+  const direction = MOVEMENT_KEYS[data];
 
   // to create a variable with a key-value pair of the key_message_mappings objects depending on which key is pressed during game(z, y, x, v, u)
   const messageToSend = KEY_MESSAGE_MAPPINGS[data];
@@ -32,7 +32,7 @@ const handleUserInput = function(data) { // a function to handle user input such
   }
   // if the messageToSend variable is true then send a message to the server that should be displayed ie: 'z: So much fun!'
   if (messageToSend) {
-    connection.write(`${messageToSend}`)
+    connection.write(`${messageToSend}`);
   }
 };
 

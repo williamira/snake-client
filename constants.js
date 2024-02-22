@@ -1,5 +1,5 @@
-const IP = 'localhost' 
-const PORT = 50541
+const IP = 'localhost';
+const PORT = 50541;
 
 // To put all of the movement keys into a variable so that in input.js they can be called by referencing this object
 const MOVEMENT_KEYS = {
@@ -7,7 +7,7 @@ const MOVEMENT_KEYS = {
   a: "Move: left",
   s: "Move: down",
   d: "Move: right"
-}
+};
 // To put all of the message keys into a variable so that in input.js they can be called by referencing this object
 const KEY_MESSAGE_MAPPINGS = {
   z: "Say: So much fun!",
@@ -15,7 +15,7 @@ const KEY_MESSAGE_MAPPINGS = {
   x: "Say: WoooHoo",
   u: "Say: WINNER",
   v: "Say: OOO TASTY!"
-}
+};
 
 
 
