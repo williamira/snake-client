@@ -1,12 +1,13 @@
 const { Server } = require("http");
 const net = require("net");
+const { IP, PORT } = require("./constants");
 
 
 // to create an object which will be returned to allow us to send and recieve input with server
 const connect = function () {
   const conn = net.createConnection({ 
-    host: "localhost",
-    port: 50541 
+    host: IP,
+    port: PORT
   });
 
     // to recieve messages from the server when an event with data occurs
