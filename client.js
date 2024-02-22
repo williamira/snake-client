@@ -1,22 +1,25 @@
 const { Server } = require("http");
 const net = require("net");
 
+
+// to create an object which will be returned to allow us to send and recieve input with server
 const connect = function () {
-  const conn = net.createConnection({
+  const conn = net.createConnection({ 
     host: "localhost",
     port: 50541 
   });
 
-  conn.on("data", (data) => {
-    console.log(data);
+    // to recieve messages from the server when an event with data occurs
+  conn.on("data", (data) => { 
+    console.log(data); 
   })
-
-  conn.on("connect", () => {
+  // to log a message so that we know we have connected to server when the connection event happens
+  conn.on("connect", () => { 
     console.log("Successfully connected to game server");
     
   })
-
-  conn.write("Name: WIC")
+  // To name the snake player
+  conn.write("Name: WIC") 
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
